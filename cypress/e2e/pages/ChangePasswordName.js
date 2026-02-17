@@ -16,14 +16,16 @@ class ChangePasswordPage {
         };
     }
 
-     changePassword(currentPass, newPass) {
+    // Password change karne ka complete flow
+    changePassword(currentPass, newPass) {
         this.elements.currentPasswordInput().type(currentPass); // Current password enter karein
         this.elements.passwordInput().type(newPass); // New password enter karein
         this.elements.confirmPasswordInput().type(newPass); // Confirm password enter karein
         this.elements.saveButton().click(); // Save karein
     }
 
-     verifySuccess() {
+    // Verify changes saved
+    verifySuccess() {
         this.elements.successMessage().should('be.visible'); // Message ki visibility check karein
     }
 }
